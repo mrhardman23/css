@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Internal CSS</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
+        <style>
+            /**
+             * Styles the body of the document to have a background color of
+             * lavender and text color of green.
+             */
+            body {
+                background-color: lavender; 
+                color: #51802b;
+            }
+
+            /**
+             * Styles all largest headings to be aligned to center and have
+             * a font size of 40 pixels.
+             */
+            h1 {
+                text-align: center;
+                font-size: 40px;
+            }
+
+            /**
+             * Styles all paragraphs to have a font size of 24 pixels.
+             */
+            p {
+                font-size: 24px;
+            }
+
+            /**
+             * Styles the paragraph with the ID of styledById to use the
+             * font Georgia. If it cannot use Georgia, it will try using Cambria.
+             * If it cannot use Cambria, it will use the default serif font.
+             */
+            #styledById {
+                font-family: Georgia, Cambria, serif;
+                font-weight: bold;
+            }
+
+            /**
+             * Styles all unordered lists to have no bullet points 
+             * beside list items.
+             */
+            ul {
+                list-style: none;
+            }
+
+            /**
+             * Styles all list items to add 5 pixels of padding,
+             * 4 pixels of margin, and a font size of 20 pixels.
+             */
+            li {
+                padding: 5px;
+                margin: 4px;
+                font-size: 20px;
+            }
+
+            /**
+             * Styles all links with a class of navLinks to add
+             * 5 pixels of padding, 4 pixels of margin, a border
+             * that is solid black and 2 pixels wide, a background
+             * color of off-white, and a text color of dark green.
+             */
+            .navLinks {
+                padding: 5px;
+                margin: 4px;
+                border: 2px solid black;
+                background-color: #eeffee;
+                color: darkgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>
+                    <a class="navLinks" href="index.html">Inline CSS Home Page</a>
+                </li>
+                <li>
+                    <a class="navLinks" href="internal-css.html">Internal CSS Page</a>
+                </li>
+                <li>
+                    <a class="navLinks" href="external-css.html">External CSS Page</a>
+                </li>
+                <li>
+                    <a class="navLinks" href="testing-cascading.html">Testing Cascading Page</a>
+                </li>
+                <li>
+                    <a class="navLinks" href="classes-and-ids.html">Classes and IDs Page</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Classes and IDs</h1>
+            <p>This page plays with classes and IDs and adds styling to these classes and IDs.</p>
+            <p id="styledById">This paragraph will show the effect of giving an element an ID and styling that ID.</p>
+        </main>
+    </body>
+</html>
