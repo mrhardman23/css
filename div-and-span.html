@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Classes and IDs</title>
+        <title>Divs and Spans</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
         <style>
@@ -72,6 +72,33 @@
                 background-color: #eeffee;
                 color: darkgreen;
             }
+
+            /**
+             * Styles the div element to have a background color of ghost white,
+             * a height of 140px and a width that is based on the content within it.
+             */
+            div {
+                background-color: ghostwhite;
+                height: 140px;
+                width: auto;
+            }
+
+            /**
+             * Styles the span element to have a background color of indigo,
+             * and bold text.
+             */
+            span {
+                background-color: indigo;
+                font-weight: bold;
+            }
+
+            /**
+             * Styles all links in every span element to have a text color of
+             * plum.
+             */
+            span a {
+                color: plum;
+            }
         </style>
     </head>
     <body>
@@ -98,9 +125,17 @@
             </ul>
         </nav>
         <main>
-            <h1>Classes and IDs</h1>
-            <p>This page plays with classes and IDs and adds styling to these classes and IDs.</p>
-            <p id="styledById">This paragraph will show the effect of giving an element an ID and styling that ID.</p>
+            <h1>Divs and Spans</h1>
+            <div>
+                <p>This page plays with divs and spans and adds styling to the divs and spans.</p>
+                <p id="styledById">This paragraph will show the effect of giving an element an ID and styling that ID.</p>
+            </div>
+            <p>
+                If you want to see the PTEC website, click on this 
+                <span>
+                    <a href="https://www.pembinatrails.ca/schools/earlycollege/Pages/default.aspx">link</a>
+                </span>!
+            </p>
         </main>
     </body>
 </html>
