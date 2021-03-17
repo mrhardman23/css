@@ -75,7 +75,7 @@
 
             /**
              * Styles the div element to have a background color of ghost white,
-             * a height of 140px and a width that is based on the content within it.
+             * a height of 140px and a width that is normal for the div itself.
              */
             div {
                 background-color: ghostwhite;
@@ -85,16 +85,18 @@
 
             /**
              * Styles the span element to have a background color of indigo,
-             * and bold text.
+             * bold text, and aligns text to center.
              */
             span {
                 background-color: indigo;
                 font-weight: bold;
+                padding-left: 4px;
             }
 
             /**
              * Styles all links in every span element to have a text color of
-             * plum.
+             * plum. (Uses descendant selectors, i.e. select all anchors that 
+             * are inside spans)
              */
             span a {
                 color: plum;
@@ -103,26 +105,31 @@
     </head>
     <body>
         <nav>
-            <ul>
-                <li>
-                    <a class="navLinks" href="index.html">Inline CSS Home Page</a>
-                </li>
-                <li>
-                    <a class="navLinks" href="internal-css.html">Internal CSS Page</a>
-                </li>
-                <li>
-                    <a class="navLinks" href="external-css.html">External CSS Page</a>
-                </li>
-                <li>
-                    <a class="navLinks" href="testing-cascading.html">Testing Cascading Page</a>
-                </li>
-                <li>
-                    <a class="navLinks" href="classes-and-ids.html">Classes and IDs Page</a>
-                </li>
-                <li>
-                    <a class="navLinks" href="div-and-span.html">Divs and Spans Page</a>
-                </li>
-            </ul>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="navLinks" href="index.html">Inline CSS Home Page</a>
+                    </li>
+                    <li>
+                        <a class="navLinks" href="internal-css.html">Internal CSS Page</a>
+                    </li>
+                    <li>
+                        <a class="navLinks" href="external-css.html">External CSS Page</a>
+                    </li>
+                    <li>
+                        <a class="navLinks" href="testing-cascading.html">Testing Cascading Page</a>
+                    </li>
+                    <li>
+                        <a class="navLinks" href="classes-and-ids.html">Classes and IDs Page</a>
+                    </li>
+                    <li>
+                        <a class="navLinks" href="div-and-span.html">Divs and Spans Page</a>
+                    </li>
+                    <li>
+                        <a class="navLinks" href="backgrounds-and-text.html">Backgrounds and Text Page</a>
+                    </li>
+                </ul>
+            </nav>
         </nav>
         <main>
             <h1>Divs and Spans</h1>
