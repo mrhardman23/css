@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Testing Cascading</title>
+        <title>Image Sprites</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
-        <link rel="stylesheet" type="text/css" href="stylesheets/css-pages-style.css" />
-        
-        <!-- Style tag should ALWAYS go under the link tag -->
         <style>
-            body {
-                color: #151515;
-                margin: 5% 10%;
+            #companyLogo {
+                display: inline-block;
+
+                width: 216px;
+                height: 74px;
+                background: url("images/fake_amazon.png") -6px -254px;
             }
 
             h1 {
-                text-align: right;
+                display: inline-block;
+
+                width: calc(100% - 216px - 191px - 16px);
+
+                text-align: center;
+            }
+
+            #threeStars {
+                display: inline-block;
+
+                width: 191px;
+                height: 46px;
+                background: url("images/fake_amazon.png") -86px -787px;
             }
         </style>
     </head>
-    <body style="color: navy;">
+    <body>
+        <header>
+            <div id="companyLogo"></div>
+
+            <h1>Playing with Sprites</h1>
+
+            <div id="threeStars"></div>
+        </header>
         <nav>
             <ul>
                 <li>
@@ -53,9 +72,5 @@
                 </li>
             </ul>
         </nav>
-        <main>
-            <h1>Testing Cascading</h1>
-            <p>This page shows the cascading effect of having external, internal, and inline CSS all in one page!</p>
-        </main>
     </body>
 </html>

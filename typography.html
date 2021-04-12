@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Backgrounds and Text</title>
+        <title>Typography Principles</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="initial-scale=1.0, user-scalable=yes"/>
         <style>
+            * {
+                line-height: 140%;
+            }
+
             body {
-                /* background-color: lavender; */
-                background-image: url("https://images.template.net/wp-content/uploads/2014/10/Festive-Background-07.jpg");
-                /* background-repeat: repeat-y; */
-                /* background-size: 100% auto; */
+                background-color: lavender;
                 color: whitesmoke;
                 font-size: 20px;
                 margin: 5% 10%;
+            }
+
+            /* 
+                The main tag, which holds all of our main content, will
+                fade in when a user travels to the web page.
+            */
+            main {
+                opacity: 0;
+                animation: fadeIn 1s 1.2s forwards;
+            }
+
+            /* 
+                This is the keyframes definition for the fadeIn animation
+                used by the main tag, which will cause all main content to
+                start as completely transparent and go to fully opaque. It
+                will stay fully opaque after the animation completes.
+             */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
             }
 
             h1 {
@@ -20,13 +46,21 @@
                 position: relative;
                 left: 50%;
                 transform: translateX(-50%);
-                padding: 10px;
+                padding: 10px 30px;
                 font-size: 48px;
+
+                font-family: Impact, Century Gothic, sans-serif;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+
                 background-color: dimgray;
             }
 
             div p {
                 font-weight: bold;
+                font-family: Helvetica, Arial, sans-serif;
+                letter-spacing: 3px;
+                word-spacing: 6px;
                 margin-top: 0;
                 width: 100%;
             }
@@ -40,16 +74,32 @@
                 padding: 40px;
             }
 
-            ul {
+            nav ul {
                 list-style: none;
+                font-family: Geneva, Tahoma, sans-serif;
             }
 
-            li {
+            nav li {
                 display: inline-block;
                 padding: 5px;
                 margin: 4px;
                 margin-bottom: 15px;
                 font-size: 20px;
+                
+                /* 
+                    This will cause the list item to be animated using the 
+                    transform CSS property.
+                */
+                transition: transform 0.5s ease;
+            }
+
+            /* 
+                This will move the list item element 50 pixels up and
+                increase the size of the element by a factor of 1.1
+                when the user hovers over the element
+            */
+            nav li:hover {
+                transform: translateY(-5px) scale(1.1);
             }
 
             nav a {
@@ -106,7 +156,7 @@
             </ul>
         </nav>
         <main>
-            <h1>Backgrounds and Text</h1>
+            <h1>Typography Principles</h1>
             <div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
